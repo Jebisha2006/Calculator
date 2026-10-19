@@ -1,5 +1,12 @@
 
+
+package calculator;
+
+import java.util.logging.Logger;
+
 public class Calculator {
+    private static final Logger LOGGER =
+            Logger.getLogger(Calculator.class.getName());
 
     public int add(int a, int b) {
         return a + b;
@@ -23,9 +30,10 @@ public class Calculator {
     public static void main(String[] args) {
         Calculator calc = new Calculator();
 
-        System.out.println("Addition: " + calc.add(10, 5));
-        System.out.println("Subtraction: " + calc.subtract(10, 5));
-        System.out.println("Multiplication: " + calc.multiply(10, 5));
-        System.out.println("Division: " + calc.divide(10, 5));
+        LOGGER.info("Addition: " + calc.add(10, 5));
+        LOGGER.info("Subtraction: " + calc.subtract(10, 5));
+        LOGGER.info("Multiplication: " + calc.multiply(10, 5));
+        LOGGER.info("Division: " + calc.divide(10, 5));
     }
 }
+
